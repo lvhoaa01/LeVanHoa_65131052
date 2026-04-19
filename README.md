@@ -5,7 +5,7 @@
 ## 1. HelloWorld
 
 <p align="center">
-  <img src="./img/b1.png" alt="" width="700" />
+  <img src="./images/b1.png" alt="" width="700" />
 </p>
 
 
