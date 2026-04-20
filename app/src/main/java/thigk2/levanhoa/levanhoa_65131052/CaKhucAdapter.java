@@ -1,6 +1,7 @@
 package thigk2.levanhoa.levanhoa_65131052;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CaKhucAdapter extends RecyclerView.Adapter<CaKhucAdapter> {
+public class CaKhucAdapter extends RecyclerView.Adapter<CaKhucAdapter.CaKhucViewHolder> {
     private List<CaKhuc> datas = new ArrayList<>();
     private Context context;
 
@@ -22,13 +23,15 @@ public class CaKhucAdapter extends RecyclerView.Adapter<CaKhucAdapter> {
 
     @NonNull
     @Override
-    public CaKhucAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public CaKhucViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.item, parent, false);
+        return new CaKhucViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CaKhucAdapter holder, int position) {
-
+    public void onBindViewHolder(@NonNull CaKhucViewHolder holder, int position) {
+        holder.cakhucTvName.setText(datas.get(position).getCakhucTvName());
     }
 
     @Override

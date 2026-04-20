@@ -2,11 +2,18 @@ package thigk2.levanhoa.levanhoa_65131052;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,8 @@ public class Cau3Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView danhnhanRvContainer;
+
 
     public Cau3Fragment() {
         // Required empty public constructor
@@ -60,5 +69,21 @@ public class Cau3Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cau3, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        danhnhanRvContainer = view.findViewById(R.id.danhnhan_rv_container);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        List<DanhNhan> datas = new ArrayList<>();
+        datas.add(new DanhNhan(R.drawable.cropped_com_ga, "NguyenVanTroi", "Bình Định"));
+        datas.add(new DanhNhan(R.drawable.cropped_com_muoi_e, "NguyenVanLinh", "Gia Lai"));
+        datas.add(new DanhNhan(R.drawable.cropped_com_suon_bi_cha, "BillGate", "Gia Lai"));
+        datas.add(new DanhNhan(R.drawable.cropped_com_vit, "HoQuangHieu", "Gia Lai"));
+        datas.add(new DanhNhan(R.drawable.cropped_com_suon_trung, "Gill", "Gia Lai"));
+        DanhNhanAdapter adapter = new DanhNhanAdapter(datas, getContext());
+        danhnhanRvContainer.setAdapter(adapter);
+        danhnhanRvContainer.setLayoutManager(layoutManager);
     }
 }

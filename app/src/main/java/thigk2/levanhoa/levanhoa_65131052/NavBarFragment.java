@@ -92,6 +92,10 @@ public class NavBarFragment extends Fragment {
                     tmpFragment = homeFragment;
                 } else if (id == R.id.cau_2) {
                     tmpFragment = cau2Fragment;
+                } else if(id == R.id.cau_3){
+                    tmpFragment = cau3Fragment;
+                }else if(id == R.id.cau_4){
+                    tmpFragment = cau4Fragment;
                 }
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_container, tmpFragment)
