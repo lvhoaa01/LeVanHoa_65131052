@@ -5,6 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".Cau2Fragment">
 
-    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cakhuc_rv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </FrameLayout>

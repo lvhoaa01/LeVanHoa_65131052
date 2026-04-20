@@ -4,17 +4,27 @@
 
     <item
         android:id="@+id/tab_home"
-        android:title="Item" />
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        />
     <item
         android:id="@+id/cau_1"
-        android:title="Item" />
+        android:title="Câu 1"
+        android:icon="@drawable/baseline_circle_24"
+        />
     <item
         android:id="@+id/cau_2"
-        android:title="Item" />
+        android:title="Câu 2"
+        android:icon="@drawable/baseline_circle_24"
+        />
     <item
         android:id="@+id/cau_3"
-        android:title="Item" />
+        android:title="Câu 3"
+        android:icon="@drawable/baseline_circle_24"
+        />
     <item
         android:id="@+id/cau_4"
-        android:title="Item" />
+        android:title="Câu 4"
+        android:icon="@drawable/baseline_circle_24"
+        />
 </menu>
